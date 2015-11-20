@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="30435ef2-3daf-4e2a-8565-f8f698086946" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/README.text" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/fixtures/fixtures1.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/fixtures/fixtures2.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/fixtures/pre fixture text" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/migrations/0001_initial.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/migrations/0002_qatestdefinition_daftness.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/migrations/0003_remove_qatestdefinition_daftness.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/migrations/0004_auto_20150625_0450.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/migrations/0005_auto_20150703_0448.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/migrations/0006_auto_20150703_0450.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/migrations/0007_auto_20150704_0218.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/migrations/0008_auto_20150705_0747.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/migrations/0009_auto_20150707_0712.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/migrations/0010_qatestresult_user.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/migrations/0011_auto_20150711_1156.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/migrations/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/migrations/hide/0001_initial copy 2.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/migrations/hide/0001_initial copy.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/migrations/hide/0001_initial.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/migrations/hide/0002_auto_20150601_1147.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/migrations/hide/0002_auto_20150623_0744.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/migrations/hide/0003_auto_20150623_0759.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/migrations/hide/0003_electrometer_ionchamber_photoncheckcalibration.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/migrations/hide/0004_auto_20150623_0640.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/migrations/hide/0010_qatestresult_user copy.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/migrations/hide/0010_qatestresult_user.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/migrations/hide/0011_auto_20150711_1154.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/migrations/hide/0011_remove_qatestresult_user.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/migrations/hide/0012_auto_20150711_1154.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/static/jquery.sparkline.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/static/script1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/static/script2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/static_orig/js/script.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/templates/compound_form.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/templates/dailyphotontestinstance.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/templates/dailyphotontestinstance_2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/templates/generictestinstance.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/templates/greenfrog.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/templates/js/script.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/templates/latestresults.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/templates/qa_dailyphotontest.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/templates/qa_photoncheckcalibration.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/templates/qa_test_result.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/templates/redfrog.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kitkat/templates/testinstance.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sample.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sandbucket.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wbrc/wsgi.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kitkat/admin.py" afterPath="$PROJECT_DIR$/kitkat/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kitkat/forms.py" afterPath="$PROJECT_DIR$/kitkat/forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kitkat/templates/home.html" afterPath="$PROJECT_DIR$/kitkat/templates/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kitkat/models.py" afterPath="$PROJECT_DIR$/kitkat/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kitkat/templates/qa_testforms.html" afterPath="$PROJECT_DIR$/kitkat/templates/qa_testforms.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wbrc/settings.py" afterPath="$PROJECT_DIR$/wbrc/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kitkat/urls.py" afterPath="$PROJECT_DIR$/kitkat/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wbrc/urls.py" afterPath="$PROJECT_DIR$/wbrc/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kitkat/views.py" afterPath="$PROJECT_DIR$/kitkat/views.py" />
+    </list>
+    <ignored path="django-kitkat.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="django-kitkat" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/kitkat/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.024630541">
+              <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="56" />
+    <option name="y" value="22" />
+    <option name="width" value="1293" />
+    <option name="height" value="706" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="django-kitkat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="django-kitkat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="django-kitkat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="django-kitkat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="django-kitkat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kitkat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="30435ef2-3daf-4e2a-8565-f8f698086946" name="Default" comment="" />
+      <created>1447970394427</created>
+      <option name="number" value="Default" />
+      <updated>1447970394427</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="56" y="22" width="1293" height="706" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24980666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/kitkat/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.024630541">
+          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

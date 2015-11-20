@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<script src='http://code.jquery.com/jquery-1.11.3.min.js'></script>
+<script src="{{ STATIC_URL }}jquery.js"></script>
+<script src="{{ STATIC_URL }}searchform.js"></script> 
+
+
+<style media="screen" type="text/css">
+
+body {
+    background-color: #CCFFCC;
+}
+</style>
+
+
+
+<form action="/kitkat/searchdb/" method = "post" >{% csrf_token %}
+    {{ form.as_p }}
+	<div id="additional_filters"></div>
+	<p>Apply additional filters&nbsp
+	<select id="select_attribute"><option value="">No test selected</option></select>
+	<button id = "additional_filters_button" type="button">+</button><span id="error"></span></p> 
+    <p><input type="submit" value="Search" /></p>
+</form>
+
+<a href='/kitkat/home'>Home</a>
+</html>

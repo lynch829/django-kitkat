@@ -1,0 +1,437 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>django files &mdash; django-kitkat 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="django-kitkat 1.0 documentation" href="index.html" />
+    <link rel="prev" title="Instructions for running software in development mode" href="install.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="django-files">
+<h1>django files<a class="headerlink" href="#django-files" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-kitkat.models"></span><div class="section" id="models-py">
+<h2>models.py<a class="headerlink" href="#models-py" title="Permalink to this headline">¶</a></h2>
+<p>Contains definitions of all tables in the database as Python objects</p>
+</div>
+<dl class="class">
+<dt id="kitkat.models.Machine">
+<em class="property">class </em><code class="descclassname">kitkat.models.</code><code class="descname">Machine</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.models.Machine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Machine includes treatment machines ie linear accelerators, CT scanners
+alternative name: TreatmentMachine</p>
+<p>is_visible denotes whether a machine should be available to be selected
+in data entry forms</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="kitkat.models.Electrometer">
+<em class="property">class </em><code class="descclassname">kitkat.models.</code><code class="descname">Electrometer</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.models.Electrometer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Table to contain data for all electrometers</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="kitkat.models.IonChamber">
+<em class="property">class </em><code class="descclassname">kitkat.models.</code><code class="descname">IonChamber</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.models.IonChamber" title="Permalink to this definition">¶</a></dt>
+<dd><p>Table to contain data for all Ion Chambers</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="kitkat.models.QATestDefinition">
+<em class="property">class </em><code class="descclassname">kitkat.models.</code><code class="descname">QATestDefinition</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.models.QATestDefinition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Table to contain basic definition data for a QA test.  variable_input
+is true only for tests that perform the same measurements over different
+LINAC beam strengths</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="kitkat.models.QATestAttributeDefinition">
+<em class="property">class </em><code class="descclassname">kitkat.models.</code><code class="descname">QATestAttributeDefinition</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.models.QATestAttributeDefinition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Each value that needs to be measured for a QA test is defined in this
+table</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="kitkat.models.QATestInputDefinition">
+<em class="property">class </em><code class="descclassname">kitkat.models.</code><code class="descname">QATestInputDefinition</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.models.QATestInputDefinition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Contains LINAC beam strength values for a QA Test Definitions whose
+variable_input paramaters are set to True</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="kitkat.models.QATestResult">
+<em class="property">class </em><code class="descclassname">kitkat.models.</code><code class="descname">QATestResult</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.models.QATestResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>The basic table for a QA Test Result.  Anything else that needs to be 
+entered for a test is kept in tables inherited from QA Test Attribute
+Result, Temperature Pressure table or Test Equipment table</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="kitkat.models.QATestAttributeResult">
+<em class="property">class </em><code class="descclassname">kitkat.models.</code><code class="descname">QATestAttributeResult</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.models.QATestAttributeResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for Float Value, Bool Value and Float Average Value.
+Table contains all entered data for QA test forms that is specific
+to QA Test Attribute Definitions</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="kitkat.models.FloatValue">
+<em class="property">class </em><code class="descclassname">kitkat.models.</code><code class="descname">FloatValue</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.models.FloatValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Contains data for entered or calculated float values</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="kitkat.models.BoolValue">
+<em class="property">class </em><code class="descclassname">kitkat.models.</code><code class="descname">BoolValue</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.models.BoolValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Contains data for entered or calculated boolean values</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="kitkat.models.FloatAverageValue">
+<em class="property">class </em><code class="descclassname">kitkat.models.</code><code class="descname">FloatAverageValue</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.models.FloatAverageValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Contains entered data for form fields in which a mean is calculated
+from a number of entries</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="kitkat.models.TemperaturePressure">
+<em class="property">class </em><code class="descclassname">kitkat.models.</code><code class="descname">TemperaturePressure</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.models.TemperaturePressure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Temperature and Pressure data for a QA test instance</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="kitkat.models.TestEquipment">
+<em class="property">class </em><code class="descclassname">kitkat.models.</code><code class="descname">TestEquipment</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.models.TestEquipment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Table containing test equipment selections for a QA test</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="kitkat.models.MachineTest">
+<em class="property">class </em><code class="descclassname">kitkat.models.</code><code class="descname">MachineTest</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.models.MachineTest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Associative table to define which tests can be performed on which machines</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="kitkat.models.IonChamberAdditionalInfo">
+<em class="property">class </em><code class="descclassname">kitkat.models.</code><code class="descname">IonChamberAdditionalInfo</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.models.IonChamberAdditionalInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Contains Ion-Chamber specific data for expected readings, upper and lower
+bounds for readings etc.</p>
+</dd></dl>
+
+<span class="target" id="module-kitkat.views"></span><div class="section" id="views-py">
+<h2>views.py<a class="headerlink" href="#views-py" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Contains methods to process HTTP GET and POST data:</dt>
+<dd><ul class="first last simple">
+<li>methods provide content for and display web pages</li>
+<li>methods to assemble data entry forms from QA Test Definitions</li>
+<li>methods to save data from entry forms into the database</li>
+<li>methods to respond to Ajax requests sent by javascript $.get calls</li>
+</ul>
+</dd>
+</dl>
+</div>
+<dl class="method">
+<dt id="kitkat.views.user_login">
+<code class="descclassname">views.</code><code class="descname">user_login</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.views.user_login" title="Permalink to this definition">¶</a></dt>
+<dd><p>process data from log in form, redirect to the home page if the user
+enters a valid username/password combination</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="kitkat.views.user_logout">
+<code class="descclassname">views.</code><code class="descname">user_logout</code><span class="sig-paren">(</span><em>request</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.views.user_logout" title="Permalink to this definition">¶</a></dt>
+<dd><p>log out user, redirect to login form</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="kitkat.views.login_form">
+<code class="descclassname">views.</code><code class="descname">login_form</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.views.login_form" title="Permalink to this definition">¶</a></dt>
+<dd><p>display login form</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="kitkat.views.recent_entries_table">
+<code class="descclassname">views.</code><code class="descname">recent_entries_table</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.views.recent_entries_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>List dates of most recently performed QA tests for all valid machine
+and test combinations as defined in Machine Test table</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="kitkat.views.process_machine_and_test_form">
+<code class="descclassname">views.</code><code class="descname">process_machine_and_test_form</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.views.process_machine_and_test_form" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input: HTTP POST data from a Select Machine and Test Form</p>
+<p>If valid details have been supplied, the request is redirected to method to 
+display a data entry form for the selected machine and test.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="kitkat.views.process_qa_form">
+<code class="descclassname">views.</code><code class="descname">process_qa_form</code><span class="sig-paren">(</span><em>request</em>, <em>first_request=False</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.views.process_qa_form" title="Permalink to this definition">¶</a></dt>
+<dd><p>Form display and save method for Daily Photon Output Test, Photon Check
+Calibration and Electron Check Calibration</p>
+<p>Constructs QATestResultForm object from POST data from request.
+Creates all form objects 
+(Float Value Forms, Bool Value Forms, Float Average Value Forms, Test 
+Equipment Forms, Temperature Pressure Forms)
+to assemble the data entry form for the selected 
+test and pass these to the &#8216;qa_testforms.html&#8217; template.</p>
+<dl class="docutils">
+<dt>The request contains either:</dt>
+<dd><ul class="first last simple">
+<li>POST data from from a Select Machine and Test Form              (first_request == True) in which case the data entry form is          assembled using blank forms</li>
+<li>POST data from a completed data entry form for validation and saving.         If all sub-forms validate, data is saved into the database and user             is redirected to the &#8216;display_entry&#8217; page for the data submitted.               If any form does not validate,  the user is returned to the entry               form with error messages</li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="kitkat.views.create_form_component">
+<code class="descclassname">views.</code><code class="descname">create_form_component</code><span class="sig-paren">(</span><em>attribute_type</em>, <em>form_prefix</em>, <em>request</em>, <em>initial_data</em>, <em>label</em>, <em>first_request</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.views.create_form_component" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiate and return a QA Test Attribute Result Form (Float Value Form,
+Bool Value Form or Float Average Value Form) from parameters supplied</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="kitkat.views.linac_mechanical_check_view">
+<code class="descclassname">views.</code><code class="descname">linac_mechanical_check_view</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.views.linac_mechanical_check_view" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct data entry form for LINAC mechanical check using test definition</p>
+<p>TO DO: Modify this method to save POST data from the form as in addition to
+as generating the empty form.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="kitkat.views.display_entry">
+<code class="descclassname">views.</code><code class="descname">display_entry</code><span class="sig-paren">(</span><em>request</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.views.display_entry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a HTTPResponse object containing all data for a QA Test Result
+entry with a given primary key</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="kitkat.views.past_results">
+<code class="descclassname">views.</code><code class="descname">past_results</code><span class="sig-paren">(</span><em>request</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.views.past_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display a list of links to data from QA Test Result entries specific
+to a given machine and given test</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="kitkat.views.search">
+<code class="descclassname">views.</code><code class="descname">search</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.views.search" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display search.html page</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="kitkat.views.searchdb">
+<code class="descclassname">views.</code><code class="descname">searchdb</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.views.searchdb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process Search Form and return results as a HTTPResponse object</p>
+<p>First filter all test results by parameters defined in Search Form,
+then apply additional filters</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="kitkat.views.additional_filters">
+<code class="descclassname">views.</code><code class="descname">additional_filters</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.views.additional_filters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct additional filter form element for search page</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="kitkat.views.list_filters_for_test">
+<code class="descclassname">views.</code><code class="descname">list_filters_for_test</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.views.list_filters_for_test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find QA Test Attribute Definitions for a QA Test Definition that may
+be used to filter search results</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="kitkat.views.recent_results_daily_photon_output_test">
+<code class="descclassname">views.</code><code class="descname">recent_results_daily_photon_output_test</code><span class="sig-paren">(</span><em>request</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.views.recent_results_daily_photon_output_test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return 5 most recent entries for the Daily Photon Output Test along with
+entry dates</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="kitkat.views.list_machines_for_test">
+<code class="descclassname">views.</code><code class="descname">list_machines_for_test</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.views.list_machines_for_test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of applicable machines for a given QA Test Definition</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="kitkat.views.get_dpot_bounds">
+<code class="descclassname">views.</code><code class="descname">get_dpot_bounds</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.views.get_dpot_bounds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve upper and lower bounds for Daily Photon Output Test</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="kitkat.views.get_ion_chamber_expected_readings">
+<code class="descclassname">views.</code><code class="descname">get_ion_chamber_expected_readings</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.views.get_ion_chamber_expected_readings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get expected readings from Ion Chamber Additional Info table once
+an Ion Chamber has been selected in an entry form</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="kitkat.views.get_ratio_bounds">
+<code class="descclassname">views.</code><code class="descname">get_ratio_bounds</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.views.get_ratio_bounds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get upper and lower limits for DCF Ratio from Ion Chamber Additional Info 
+table once an Ion Chamber and Machine have been selected in an entry form</p>
+</dd></dl>
+
+<span class="target" id="module-kitkat.forms"></span><div class="section" id="forms-py">
+<h2>forms.py<a class="headerlink" href="#forms-py" title="Permalink to this headline">¶</a></h2>
+<p>Classes in this module define all data entry forms and components of forms</p>
+</div>
+<dl class="class">
+<dt id="kitkat.forms.SearchForm">
+<em class="property">class </em><code class="descclassname">kitkat.forms.</code><code class="descname">SearchForm</code><span class="sig-paren">(</span><em>data=None</em>, <em>files=None</em>, <em>auto_id=u'id_%s'</em>, <em>prefix=None</em>, <em>initial=None</em>, <em>error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em>label_suffix=None</em>, <em>empty_permitted=False</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.forms.SearchForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>form to enter search filters on the &#8216;search.html&#8217; page</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="kitkat.forms.FloatSearchFilterForm">
+<em class="property">class </em><code class="descclassname">kitkat.forms.</code><code class="descname">FloatSearchFilterForm</code><span class="sig-paren">(</span><em>data=None</em>, <em>files=None</em>, <em>auto_id=u'id_%s'</em>, <em>prefix=None</em>, <em>initial=None</em>, <em>error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em>label_suffix=None</em>, <em>empty_permitted=False</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.forms.FloatSearchFilterForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>form to specify filtering parameters on a QA Test Attribute Result object
+of type Float Value</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="kitkat.forms.SelectMachineAndTestForm">
+<em class="property">class </em><code class="descclassname">kitkat.forms.</code><code class="descname">SelectMachineAndTestForm</code><span class="sig-paren">(</span><em>data=None</em>, <em>files=None</em>, <em>auto_id=u'id_%s'</em>, <em>prefix=None</em>, <em>initial=None</em>, <em>error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em>label_suffix=None</em>, <em>empty_permitted=False</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.forms.SelectMachineAndTestForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Form displayed on home page in which a user can select a machine and a 
+test and progress to a data entry form for the selected test</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="kitkat.forms.QATestResultForm">
+<em class="property">class </em><code class="descclassname">kitkat.forms.</code><code class="descname">QATestResultForm</code><span class="sig-paren">(</span><em>data=None</em>, <em>files=None</em>, <em>auto_id=u'id_%s'</em>, <em>prefix=None</em>, <em>initial=None</em>, <em>error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em>label_suffix=None</em>, <em>empty_permitted=False</em>, <em>instance=None</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.forms.QATestResultForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Entry form for QA Test Result model</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="kitkat.forms.QATestAttributeResultForm">
+<em class="property">class </em><code class="descclassname">kitkat.forms.</code><code class="descname">QATestAttributeResultForm</code><span class="sig-paren">(</span><em>data=None</em>, <em>files=None</em>, <em>auto_id=u'id_%s'</em>, <em>prefix=None</em>, <em>initial=None</em>, <em>error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em>label_suffix=None</em>, <em>empty_permitted=False</em>, <em>instance=None</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.forms.QATestAttributeResultForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Entry form for the QA Test Attribute Result table.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="kitkat.forms.FloatValueForm">
+<em class="property">class </em><code class="descclassname">kitkat.forms.</code><code class="descname">FloatValueForm</code><span class="sig-paren">(</span><em>data=None</em>, <em>files=None</em>, <em>auto_id=u'id_%s'</em>, <em>prefix=None</em>, <em>initial=None</em>, <em>error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em>label_suffix=None</em>, <em>empty_permitted=False</em>, <em>instance=None</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.forms.FloatValueForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Entry form for Float Value</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="kitkat.forms.FloatAverageValueForm">
+<em class="property">class </em><code class="descclassname">kitkat.forms.</code><code class="descname">FloatAverageValueForm</code><span class="sig-paren">(</span><em>data=None</em>, <em>files=None</em>, <em>auto_id=u'id_%s'</em>, <em>prefix=None</em>, <em>initial=None</em>, <em>error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em>label_suffix=None</em>, <em>empty_permitted=False</em>, <em>instance=None</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.forms.FloatAverageValueForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Entry form for Float Average Value</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="kitkat.forms.BoolValueForm">
+<em class="property">class </em><code class="descclassname">kitkat.forms.</code><code class="descname">BoolValueForm</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.forms.BoolValueForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Entry form for Bool Value</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="kitkat.forms.TestEquipmentForm">
+<em class="property">class </em><code class="descclassname">kitkat.forms.</code><code class="descname">TestEquipmentForm</code><span class="sig-paren">(</span><em>data=None</em>, <em>files=None</em>, <em>auto_id=u'id_%s'</em>, <em>prefix=None</em>, <em>initial=None</em>, <em>error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em>label_suffix=None</em>, <em>empty_permitted=False</em>, <em>instance=None</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.forms.TestEquipmentForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Entry form for Test Equipment</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="kitkat.forms.TemperaturePressureForm">
+<em class="property">class </em><code class="descclassname">kitkat.forms.</code><code class="descname">TemperaturePressureForm</code><span class="sig-paren">(</span><em>data=None</em>, <em>files=None</em>, <em>auto_id=u'id_%s'</em>, <em>prefix=None</em>, <em>initial=None</em>, <em>error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em>label_suffix=None</em>, <em>empty_permitted=False</em>, <em>instance=None</em><span class="sig-paren">)</span><a class="headerlink" href="#kitkat.forms.TemperaturePressureForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Entry form for Temperature Pressure</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">django files</a><ul>
+<li><a class="reference internal" href="#models-py">models.py</a></li>
+<li><a class="reference internal" href="#views-py">views.py</a></li>
+<li><a class="reference internal" href="#forms-py">forms.py</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="install.html" title="previous chapter">Instructions for running software in development mode</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/django_files.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Catherine Bromhead.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
+      
+      |
+      <a href="_sources/django_files.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

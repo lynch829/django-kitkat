@@ -1,0 +1,4 @@
+recursive-include kitkat/static *
+recursive-include kitkat/static/flot *
+recursive-include kitkat/templates *
+

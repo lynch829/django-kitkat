@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<script src='http://code.jquery.com/jquery-1.11.3.min.js'></script>
+<script src="{{ STATIC_URL }}jquery.js"></script>
+<script src="{{ STATIC_URL }}home.js"></script> 
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}base.css">
+<style media="screen" type="text/css">
+
+body {
+    background-color: #CCFFCC;
+}
+
+#entry_form{
+	border 1px solid black;
+}
+
+#recent_entries_table, #recent_entries_table td{
+    padding: 3px;
+	border: 1px solid black;
+	align: center
+}
+</style>
+
+
+<h1 align="center">Physics QA Database</h1>
+<br/>
+
+<div id="entry_form">
+<p align = "center">Record QA Event</p>
+
+<form align = "center" action="{% url 'kitkat:process_machine_and_test_form' %}" method = "post" >{% csrf_token %}
+{% for field in select_form %}
+	<p align = "center">{{ field.label }}:&nbsp{{ field }} </p>
+{% endfor %}
+</p>
+ <p align ="center">   <input type="submit" value="Enter" /></p>
+
+</form>
+</div>
+
+<table id="recent_entries_table" align = 'center'>
+{% for row in tbl %}
+{% if forloop.first %}
+<tr id='header_row'>
+{% else %}
+<tr>
+{% endif %}
+{% for entry in row %}
+<td>{{ entry | safe }}</td>
+{% endfor %}
+</tr>
+{% endfor %}
+</table>
+<br/>
+
+<p align = "center"><a href="/kitkat/search/">Search</a></p>
+
+<p align = "center"><a href="/admin/">Admin</a></p>
+
+<p align = "center"><a href="/kitkat/user_logout/">Log out</a></p>
+
+<p id="ajax_test"></p>

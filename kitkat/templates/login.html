@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>QA database login</title>
+    </head>
+
+    <body>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Log in to QA database</p>
+        <form id="login_form" method="post" action="/kitkat/user_login/">
+            {% csrf_token %}
+            <p>Username: <input type="text" name="username" value="" size="50" /></p>
+
+            <p>Password: <input type="password" name="password" value="" size="50" /></p>
+
+
+            <input type="submit" value="Log in" />
+        </form>
+
+    </body>
+</html>

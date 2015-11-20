@@ -1,0 +1,8 @@
+Overview
+--------
+
+The django-kitkat application is designed to store quality assurance (QA) data
+for tests performed at the Alfred Health Radiation Oncology centre.  Users 
+must be logged in to access the site.
+
+

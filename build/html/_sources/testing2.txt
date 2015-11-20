@@ -1,0 +1,43 @@
+=====
+django files
+=====
+
+
+.. automodule:: kitkat.models
+.. autoclass:: kitkat.models.Machine
+.. autoclass:: kitkat.models.Electrometer
+.. autoclass:: kitkat.models.IonChamber
+.. autoclass:: kitkat.models.QATestDefinition
+.. autoclass:: kitkat.models.QATestAttributeDefinition
+.. autoclass:: kitkat.models.QATestInputDefinition
+.. autoclass:: kitkat.models.QATestResult
+.. autoclass:: kitkat.models.QATestAttributeResult
+.. autoclass:: kitkat.models.FloatValue
+.. autoclass:: kitkat.models.BoolValue
+.. autoclass:: kitkat.models.FloatAverageValue
+.. autoclass:: kitkat.models.TemperaturePressure
+.. autoclass:: kitkat.models.TestEquipment
+.. autoclass:: kitkat.models.MachineTest
+.. autoclass:: kitkat.models.IonChamberAdditionalInfo
+.. automodule:: kitkat.views
+.. automethod:: kitkat.views.user_login
+.. automethod:: kitkat.views.user_logout
+.. automethod:: kitkat.views.login_form
+.. automethod:: kitkat.views.recent_entries_table
+.. automethod:: kitkat.views.process_machine_and_test_form
+.. automethod:: kitkat.views.process_qa_form
+.. automethod:: kitkat.views.create_form_component
+.. automethod:: kitkat.views.linac_mechanical_check_view
+.. automethod:: kitkat.views.display_entry
+.. automethod:: kitkat.views.past_results
+.. automethod:: kitkat.views.search
+.. automethod:: kitkat.views.searchdb
+.. automethod:: kitkat.views.additional_filters
+.. automethod:: kitkat.views.list_filters_for_test
+.. automethod:: kitkat.views.recent_results_daily_photon_output_test
+.. automethod:: kitkat.views.list_machines_for_test
+.. automethod:: kitkat.views.get_dpot_bounds
+.. automethod:: kitkat.views.get_ion_chamber_expected_readings
+.. automethod:: kitkat.views.get_ratio_bounds
+
+

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+<script src='http://code.jquery.com/jquery-1.11.3.min.js'></script>
+<script src="{{ STATIC_URL }}jquery.js"></script>
+<!--<script src="{{ STATIC_URL }}jquery.sparkline.min.js"></script> -->
+<script src="{{ STATIC_URL }}flot/excanvas.js"></script>
+<script src="{{ STATIC_URL }}flot/jquery.flot.min.js"></script>
+<script src="{{ STATIC_URL }}flot/jquery.flot.time.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}base.css">
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}forms.css">
+
+
+<!-- <script src="{{ STATIC_URL }}flot/jquery.axislabels.js"></script> does such a thing even exist?? -->
+
+<!-- <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script> -->
+{% load staticfiles %}
+
+{% for jquery_script in scripts %}
+	<script src="{{ STATIC_URL }}{{ jquery_script }}"></script>
+{% endfor %}
+
+<style media="screen" type="text/css">
+#table1, #table1 td {
+    padding: 3px;
+}
+#table2, #table2 td {
+    padding: 3px;
+	empty-cells:show;
+}
+
+#dcf_pass, #ratio_pass, #dcf_pass td, #ratio_pass td{
+	font-size:8
+	align: center
+	padding: 0px
+}
+
+#table2 tr td input {
+	width: 10
+	}
+
+body {
+    background-color: #CCFFCC;
+}
+</style>
+
+<!-- <script src="{{ STATIC_URL}}script2.js"></script> -->
+<form action="/kitkat/process_qa_form/"  method = "post" >{% csrf_token %}
+<table id="table1">
+<!--<col width = 400>
+<col width = 400> -->
+<tr>
+<!--{% for field in resultform %}
+<td>{{ field.label }}:&nbsp{{ field }}</td>
+{% endfor %}-->
+<td>{{ resultform.qa_test_def_id.label }}:&nbsp{{ resultform.qa_test_def_id }}</td>
+<td>{{ resultform.machine_id.label }}:&nbsp{{ resultform.machine_id }}</td>
+</tr>
+
+{% for form in prelim_forms %}
+<tr>
+	{% for field in form %}
+		<td>{{ field.label }}:&nbsp{{ field }}</td>
+	{% endfor %}
+</tr>
+{% endfor %}
+</table>
+
+ <table id="table2">
+<col width = 200>
+<tr>
+<td></td>
+{% for label in input_labels %}
+<td>{{ label }} </td>
+{% endfor %}
+</tr>
+{% for form_list in attribute_forms %}
+<tr>
+		{% for form in form_list %}
+			{% if forloop.first %}
+				<td align = "right">{{ form.visible_fields.0.label }}</td>
+				
+			{% endif %}
+			<td>{{ form.visible_fields.0 }}
+				{% if form.visible_fields.0.errors %}
+					<br/><span style="color: red">{{form.visible_fields.0.errors.as_text}}</span>
+				{% endif %}</td>
+		{% endfor %}
+		{% if form_list.0.visible_fields|length > 1 %}
+		</tr></tr>
+		{% for form in form_list %}
+
+					{% if forloop.first %}
+				<td align = "right">{{ form.visible_fields.1.label }}</td>
+				
+			{% endif %}
+			<td>{{ form.visible_fields.1 }}
+				{% if form.visible_fields.1.errors %}
+					<br/><span style="color: red">{{form.visible_fields.1.errors.as_text}}</span>
+				{% endif %}</td>
+
+		{% endfor %}
+{%endif %}
+
+</tr>
+{% endfor %}
+</table>
+<!--Now for the hidden fields -->
+{% for form_list in attribute_forms %}
+	{% for form in form_list %}
+		{% for field in form.hidden_fields %}
+			{{field}}
+		{% endfor %}
+	{% endfor %}
+{% endfor %}
+<p>{{resultform.comment.label}}:&nbsp{{resultform.comment}}</p>
+
+<!--Now for the totally hidden forms-->
+{% for hidden_list in hidden_forms %}
+{% for form in hidden_list %}
+{{ form.as_p }}
+<!--{% for field in form %}
+{{ field.as_hidden }}
+{% endfor %}-->
+{% endfor %}		
+{% endfor %}			
+
+
+
+    <input type="submit" value="Enter" />
+</form>
+<a href='/kitkat/home'>Home</a>
+</html>

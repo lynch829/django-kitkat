@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>templates &mdash; django-kitkat 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="django-kitkat 1.0 documentation" href="index.html" />
+    <link rel="prev" title="django files" href="django_files.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="templates">
+<h1>templates<a class="headerlink" href="#templates" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="home-html">
+<h2>home.html<a class="headerlink" href="#home-html" title="Permalink to this headline">¶</a></h2>
+<p>Context: select_form, tbl</p>
+<p>The application home page.  Data is sent to this page from views.home.  The
+page contains a blank instance of forms.SelectMachineAndTestForm and a table
+of most recently entered test data.  The page contains links to most recently
+performed test summaries, the search page and the admin page</p>
+</div>
+<div class="section" id="qa-testforms-html">
+<h2>qa_testforms.html<a class="headerlink" href="#qa-testforms-html" title="Permalink to this headline">¶</a></h2>
+<p>Context: result_form, attribute_forms, prelim_forms, hidden_forms, input_labels,
+scripts</p>
+<p>This page displays a data entry form for a QA test assembled in
+views.process_qa_form.  The HTML document uses the Django template language
+to display an arbitrary number of form components in a data entry table.
+The template is passed the name of a javascript file to use.</p>
+</div>
+<div class="section" id="linacmechanicalcheck-html">
+<h2>linacmechanicalcheck.html<a class="headerlink" href="#linacmechanicalcheck-html" title="Permalink to this headline">¶</a></h2>
+<p>Context: result_form, formatted_groups, scripts, input_labels</p>
+<p>Template written specifically to render the entry form for the Linac Mechanical
+Check, but could potentially be extended to other test types.  The form is
+rendered from the views.linac_mechanical_check_view method.</p>
+</div>
+<div class="section" id="searchform-html">
+<h2>searchform.html<a class="headerlink" href="#searchform-html" title="Permalink to this headline">¶</a></h2>
+<p>Context: search_form</p>
+<p>Template to display the search page.  Contains a blank search form.  When form
+is filled in, data is passed to the views.searchdb method.</p>
+</div>
+<div class="section" id="login-html">
+<h2>login.html<a class="headerlink" href="#login-html" title="Permalink to this headline">¶</a></h2>
+<p>A template for a basic login page, upon submission redirects to
+views.user_login method</p>
+</div>
+<div class="section" id="filters-html">
+<h2>filters.html<a class="headerlink" href="#filters-html" title="Permalink to this headline">¶</a></h2>
+<p>A snippet of code that is included in the searchform.html page dynamically
+by the javascript file searchform.js</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">templates</a><ul>
+<li><a class="reference internal" href="#home-html">home.html</a></li>
+<li><a class="reference internal" href="#qa-testforms-html">qa_testforms.html</a></li>
+<li><a class="reference internal" href="#linacmechanicalcheck-html">linacmechanicalcheck.html</a></li>
+<li><a class="reference internal" href="#searchform-html">searchform.html</a></li>
+<li><a class="reference internal" href="#login-html">login.html</a></li>
+<li><a class="reference internal" href="#filters-html">filters.html</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="django_files.html" title="previous chapter">django files</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/templates.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Catherine Bromhead.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
+      
+      |
+      <a href="_sources/templates.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
